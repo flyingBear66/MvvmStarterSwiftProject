@@ -10,7 +10,23 @@ import UIKit
 
 class MainViewController: ZORViewController {
 
+    // MARK: - Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.prepareUI()
+        self.prepareViewModel()
     }
+    
+    // MARK: - Helper Methods
+    
+    func prepareViewModel() {
+        
+    }
+    
+    func prepareUI() {
+        
+    }
+    
+    
 }

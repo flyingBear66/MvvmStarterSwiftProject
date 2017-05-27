@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ZORViewController: UIViewController {
-
+class ZORViewController: UIViewController {    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }

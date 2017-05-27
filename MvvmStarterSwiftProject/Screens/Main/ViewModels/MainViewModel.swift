@@ -1,5 +1,5 @@
 //
-//  ZORViewModel.swift
+//  MainViewModel.swift
 //  MvvmStarterSwiftProject
 //
 //  Created by Ozgun Zor on 28/05/2017.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ZORViewModel: NSObject {
-    
+class MainViewModel: ZORViewModel {
+
 }
