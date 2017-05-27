@@ -22,6 +22,11 @@
 		D629D8321EDA218A0021539B /* ZORTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8311EDA218A0021539B /* ZORTextField.swift */; };
 		D629D8341EDA219B0021539B /* ZORTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8331EDA219B0021539B /* ZORTextView.swift */; };
 		D629D8361EDA21DD0021539B /* ZORSecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8351EDA21DD0021539B /* ZORSecondaryButton.swift */; };
+		D629D8491EDA24C90021539B /* ZORViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8481EDA24C90021539B /* ZORViewController.swift */; };
+		D629D84B1EDA24E20021539B /* ZORViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D84A1EDA24E20021539B /* ZORViewModel.swift */; };
+		D629D84E1EDA253C0021539B /* ZORService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D84D1EDA253C0021539B /* ZORService.swift */; };
+		D629D8521EDA257B0021539B /* ZORModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8511EDA257B0021539B /* ZORModel.swift */; };
+		D629D8561EDA25EF0021539B /* ZORHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D8551EDA25EF0021539B /* ZORHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		D629D8311EDA218A0021539B /* ZORTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORTextField.swift; sourceTree = "<group>"; };
 		D629D8331EDA219B0021539B /* ZORTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORTextView.swift; sourceTree = "<group>"; };
 		D629D8351EDA21DD0021539B /* ZORSecondaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORSecondaryButton.swift; sourceTree = "<group>"; };
+		D629D8481EDA24C90021539B /* ZORViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORViewController.swift; sourceTree = "<group>"; };
+		D629D84A1EDA24E20021539B /* ZORViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORViewModel.swift; sourceTree = "<group>"; };
+		D629D84D1EDA253C0021539B /* ZORService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORService.swift; sourceTree = "<group>"; };
+		D629D8511EDA257B0021539B /* ZORModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORModel.swift; sourceTree = "<group>"; };
+		D629D8551EDA25EF0021539B /* ZORHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZORHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,7 @@
 			children = (
 				D629D81D1EDA1DFB0021539B /* Business */,
 				D629D81E1EDA1DFB0021539B /* Common */,
+				D629D8531EDA25B70021539B /* Infrastructure */,
 				D629D81F1EDA1DFB0021539B /* Presentation */,
 				D629D8211EDA1DFB0021539B /* Screens */,
 				D629D7BC1ED9FC9A0021539B /* AppDelegate.swift */,
@@ -179,6 +190,7 @@
 		D629D81D1EDA1DFB0021539B /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				D629D84C1EDA252D0021539B /* Services */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -186,6 +198,8 @@
 		D629D81E1EDA1DFB0021539B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D629D84F1EDA256B0021539B /* Constants */,
+				D629D8501EDA256B0021539B /* Models */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,6 +312,7 @@
 		D629D8451EDA229E0021539B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D629D8481EDA24C90021539B /* ZORViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -305,6 +320,7 @@
 		D629D8461EDA229E0021539B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D629D84A1EDA24E20021539B /* ZORViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -314,6 +330,45 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D629D84C1EDA252D0021539B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D629D84D1EDA253C0021539B /* ZORService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D629D84F1EDA256B0021539B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D629D8501EDA256B0021539B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D629D8511EDA257B0021539B /* ZORModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D629D8531EDA25B70021539B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				D629D8541EDA25B70021539B /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		D629D8541EDA25B70021539B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D629D8551EDA25EF0021539B /* ZORHTTPClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,12 +652,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D629D8561EDA25EF0021539B /* ZORHTTPClient.swift in Sources */,
 				D629D82E1EDA20110021539B /* ZORLabel.swift in Sources */,
 				D629D8341EDA219B0021539B /* ZORTextView.swift in Sources */,
+				D629D8521EDA257B0021539B /* ZORModel.swift in Sources */,
 				D629D8361EDA21DD0021539B /* ZORSecondaryButton.swift in Sources */,
 				D629D8301EDA20220021539B /* ZORButton.swift in Sources */,
+				D629D8491EDA24C90021539B /* ZORViewController.swift in Sources */,
+				D629D84E1EDA253C0021539B /* ZORService.swift in Sources */,
 				D629D8321EDA218A0021539B /* ZORTextField.swift in Sources */,
 				D629D7BD1ED9FC9A0021539B /* AppDelegate.swift in Sources */,
+				D629D84B1EDA24E20021539B /* ZORViewModel.swift in Sources */,
 				D629D82C1EDA1F2C0021539B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
