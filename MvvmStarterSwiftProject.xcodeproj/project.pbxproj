@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04390330C9F61FB3DBBB5405 /* Pods_MvvmStarterSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADEB5A88C5D104A49FFE7A7 /* Pods_MvvmStarterSwiftProject.framework */; };
 		749861AD1BCF52FB8DB0CCB4 /* Pods_MvvmStarterSwiftProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */; };
+		9EBE69A5224984DA0003E236 /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE69A4224984DA0003E236 /* Something.swift */; };
 		9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3ED0922496F90002B8A85 /* Endpoint.swift */; };
 		A3D90F912D6349DEC0889EC1 /* Pods_MvvmStarterSwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */; };
 		D629D7BD1ED9FC9A0021539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D7BC1ED9FC9A0021539B /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		821B7D49D0F26565BCC4947F /* Pods-MvvmStarterSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProject/Pods-MvvmStarterSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBE69A4224984DA0003E236 /* Something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
 		9ED3ED0922496F90002B8A85 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A65E9D4B0B14C97EF64586B2 /* Pods-MvvmStarterSwiftProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProjectTests/Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C374C2A2711A3667551EAF /* Pods-MvvmStarterSwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProject/Pods-MvvmStarterSwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9EBE69A3224984CF0003E236 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9EBE69A4224984DA0003E236 /* Something.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D629D7B01ED9FC9A0021539B = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +225,6 @@
 		D629D81F1EDA1DFB0021539B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D629D83C1EDA227D0021539B /* Categories */,
 				D629D83D1EDA227D0021539B /* Contants */,
 				D629D8201EDA1DFB0021539B /* Controls */,
 				D629D8431EDA229E0021539B /* Helpers */,
@@ -251,6 +260,7 @@
 		D629D8221EDA1DFB0021539B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9EBE69A3224984CF0003E236 /* Models */,
 				D629D8591EDA2B840021539B /* Service */,
 				D629D8231EDA1DFB0021539B /* ViewControllers */,
 				D629D8241EDA1DFB0021539B /* ViewModels */,
@@ -281,13 +291,6 @@
 				D629D8291EDA1EF80021539B /* Splash.storyboard */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		D629D83C1EDA227D0021539B /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		D629D83D1EDA227D0021539B /* Contants */ = {
@@ -687,6 +690,7 @@
 				D629D85D1EDA2C210021539B /* StoryboardNameConstants.swift in Sources */,
 				D629D82E1EDA20110021539B /* ZORLabel.swift in Sources */,
 				D629D8341EDA219B0021539B /* ZORTextView.swift in Sources */,
+				9EBE69A2224978D30003E236 /* UIViewController+Extensions.swift in Sources */,
 				D629D8521EDA257B0021539B /* ZORModel.swift in Sources */,
 				D629D8361EDA21DD0021539B /* ZORSecondaryButton.swift in Sources */,
 				D629D8581EDA298D0021539B /* MainViewModel.swift in Sources */,
@@ -695,6 +699,7 @@
 				9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */,
 				D629D84E1EDA253C0021539B /* ZORService.swift in Sources */,
 				D629D8321EDA218A0021539B /* ZORTextField.swift in Sources */,
+				9EBE69A5224984DA0003E236 /* Something.swift in Sources */,
 				D629D7BD1ED9FC9A0021539B /* AppDelegate.swift in Sources */,
 				D629D84B1EDA24E20021539B /* ZORViewModel.swift in Sources */,
 				D629D82C1EDA1F2C0021539B /* MainViewController.swift in Sources */,

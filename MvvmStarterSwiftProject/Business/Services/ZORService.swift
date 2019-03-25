@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ZORService: NSObject {
-
-}
-
 enum API {}
 
 extension API {
     static func getSomething() -> Endpoint<Something> {
         return Endpoint(path: "something/profile")
+    }
+    
+    static func getSomethings() -> Endpoint<[Something]> {
+        return Endpoint(path: "somethings")
     }
     
     static func postSomething(name: String) -> Endpoint<Something> {
@@ -28,14 +28,19 @@ extension API {
     }
 }
 
-final class Something: Decodable {
-    let name: String
-}
-
-
 // MARK: Using Endpoints
+
 func test() {
-    let client = HTTPClient(accessToken: "<access_token>")
+//    let client = HTTPClient(accessToken: "<access_token>")
+    let client = HTTPClient()
     _ = client.request(API.getSomething())
+    _ = client.request(API.getSomethings())
     _ = client.request(API.postSomething(name: "NameSomething"))
 }
+
+
+class ZORService {
+    let client = HTTPClient()
+}
+
+
