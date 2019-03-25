@@ -7,9 +7,8 @@ target 'MvvmStarterSwiftProject' do
 
   # Pods for MvvmStarterSwiftProject
   
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire'
   pod 'CocoaLumberjack/Swift'
-  pod 'ObjectMapper', '~> 2.2'
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
 
