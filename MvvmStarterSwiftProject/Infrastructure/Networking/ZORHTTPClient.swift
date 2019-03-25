@@ -16,8 +16,10 @@ protocol ClientProtocol {
 
 final class HTTPClient: ClientProtocol {
     private let manager: Alamofire.SessionManager
-    private let baseURL = URL(string: "<your_server_base_url>")!// TODO: Change here
-    private let queue = DispatchQueue(label: "<your_queue_label>") // TODO: Remove or use here 
+//    private let baseURL = URL(string: "<your_server_base_url>")!// TODO: Change here
+//    private let queue = DispatchQueue(label: "<your_queue_label>") // TODO: Remove or use here
+    private let baseURL = URL(string: "http://www.mocky.io/v2")!// TODO: Change here
+    private let queue = DispatchQueue(label: "httpQueue") // TODO: Remove or use here 
     
     init(accessToken: String) {
         var defaultHeaders = Alamofire.SessionManager.defaultHTTPHeaders

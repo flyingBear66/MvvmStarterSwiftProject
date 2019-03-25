@@ -12,11 +12,13 @@ enum API {}
 
 extension API {
     static func getSomething() -> Endpoint<Something> {
-        return Endpoint(path: "something/profile")
+//        return Endpoint(path: "something/profile")
+        return Endpoint(path: "5c99561a320000743ed90892")
     }
     
     static func getSomethings() -> Endpoint<[Something]> {
-        return Endpoint(path: "somethings")
+//        return Endpoint(path: "somethings")
+        return Endpoint(path: "5c9958b13200004f00d9089a")
     }
     
     static func postSomething(name: String) -> Endpoint<Something> {
