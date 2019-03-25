@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04390330C9F61FB3DBBB5405 /* Pods_MvvmStarterSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADEB5A88C5D104A49FFE7A7 /* Pods_MvvmStarterSwiftProject.framework */; };
 		749861AD1BCF52FB8DB0CCB4 /* Pods_MvvmStarterSwiftProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */; };
+		9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3ED0922496F90002B8A85 /* Endpoint.swift */; };
 		A3D90F912D6349DEC0889EC1 /* Pods_MvvmStarterSwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */; };
 		D629D7BD1ED9FC9A0021539B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D629D7BC1ED9FC9A0021539B /* AppDelegate.swift */; };
 		D629D7C41ED9FC9A0021539B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D629D7C31ED9FC9A0021539B /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		821B7D49D0F26565BCC4947F /* Pods-MvvmStarterSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProject/Pods-MvvmStarterSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED3ED0922496F90002B8A85 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A65E9D4B0B14C97EF64586B2 /* Pods-MvvmStarterSwiftProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProjectTests/Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1C374C2A2711A3667551EAF /* Pods-MvvmStarterSwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProject/Pods-MvvmStarterSwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE8B5C3F1A871CF6375289D /* Pods-MvvmStarterSwiftProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProjectUITests/Pods-MvvmStarterSwiftProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -241,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				D629D8221EDA1DFB0021539B /* Main */,
-				D629D85E1EDA2C6A0021539B /* Shared */,
 				D629D8281EDA1EE40021539B /* Splash */,
 			);
 			path = Screens;
@@ -253,7 +254,6 @@
 				D629D8591EDA2B840021539B /* Service */,
 				D629D8231EDA1DFB0021539B /* ViewControllers */,
 				D629D8241EDA1DFB0021539B /* ViewModels */,
-				D629D8251EDA1DFB0021539B /* Views */,
 				D629D8261EDA1ED40021539B /* Main.storyboard */,
 			);
 			path = Main;
@@ -273,13 +273,6 @@
 				D629D8571EDA298D0021539B /* MainViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D629D8251EDA1DFB0021539B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		D629D8281EDA1EE40021539B /* Splash */ = {
@@ -377,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				D629D8551EDA25EF0021539B /* ZORHTTPClient.swift */,
+				9ED3ED0922496F90002B8A85 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -387,21 +381,6 @@
 				D629D85A1EDA2B9C0021539B /* MainService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		D629D85E1EDA2C6A0021539B /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				D629D85F1EDA2C6A0021539B /* Models */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		D629D85F1EDA2C6A0021539B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +692,7 @@
 				D629D8581EDA298D0021539B /* MainViewModel.swift in Sources */,
 				D629D8301EDA20220021539B /* ZORButton.swift in Sources */,
 				D629D8491EDA24C90021539B /* ZORViewController.swift in Sources */,
+				9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */,
 				D629D84E1EDA253C0021539B /* ZORService.swift in Sources */,
 				D629D8321EDA218A0021539B /* ZORTextField.swift in Sources */,
 				D629D7BD1ED9FC9A0021539B /* AppDelegate.swift in Sources */,
