@@ -28,6 +28,14 @@ extension API {
             parameters: ["name" : name]
         )
     }
+    
+    static func postSomethingObject(something: Something) -> Endpoint<Something> {
+        return Endpoint(
+            method: .post,
+            path: "something/profile",
+            parameters: ["something" : something]
+        )
+    }
 }
 
 // MARK: Using Endpoints
@@ -38,6 +46,7 @@ func test() {
     _ = client.request(API.getSomething())
     _ = client.request(API.getSomethings())
     _ = client.request(API.postSomething(name: "NameSomething"))
+    _ = client.request(API.postSomethingObject(something: Something(name: "NameSomething")))
 }
 
 

@@ -20,4 +20,8 @@ class MainService: ZORService {
         return client.request(API.getSomethings()).asObservable()
     }
     
+    func postSomethingObject(something: Something) -> Observable<Something> {
+        return client.request(API.postSomethingObject(something: something)).asObservable()
+    }
+    
 }

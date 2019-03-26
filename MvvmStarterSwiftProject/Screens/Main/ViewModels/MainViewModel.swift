@@ -32,5 +32,13 @@ class MainViewModel: ZORViewModel {
             self.loading.onNext(false)
         }.disposed(by: disposeBag)
     }
+    
+    func postSomethingObject() {
+        self.loading.onNext(true)
+        let something = Something(name: "NameSomething")
+        service.postSomethingObject(something: something).bind { something in
+            self.something.onNext(something)
+        }.disposed(by: disposeBag)
+    }
 
 }

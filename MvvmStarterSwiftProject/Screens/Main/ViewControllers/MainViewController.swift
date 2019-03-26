@@ -97,6 +97,11 @@ class MainViewController: ZORViewController {
             // Code you want to be delayed
             self.viewModel.getSomethings()
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 9.0) { // Change `2.0` to the desired number of seconds.
+            // Code you want to be delayed
+            self.viewModel.postSomethingObject()
+        }
     }
     
     func prepareUI() {

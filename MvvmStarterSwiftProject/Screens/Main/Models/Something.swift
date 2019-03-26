@@ -10,4 +10,8 @@ import Foundation
 
 final class Something: Decodable {
     let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
 }
