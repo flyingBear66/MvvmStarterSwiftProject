@@ -10,6 +10,8 @@ import XCTest
 @testable import MvvmStarterSwiftProject
 
 class MainViewModelTests: XCTestCase {
+    
+    private let viewModel = MainViewModel()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,7 +22,14 @@ class MainViewModelTests: XCTestCase {
     }
 
     func testMainViewModelForMappingModels() {
+        var models: Array<Something> = []
 
+        for i in 0..<5 {
+            models.append(Something(name: "Name \(i)"))
+        }
+        
+        let viewModels = viewModel.getSomethingViewModels(with: models)
+        XCTAssertTrue(viewModels.count == models.count)
     }
 
     func testPerformanceExample() {
