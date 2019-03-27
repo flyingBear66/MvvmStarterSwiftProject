@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		04390330C9F61FB3DBBB5405 /* Pods_MvvmStarterSwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADEB5A88C5D104A49FFE7A7 /* Pods_MvvmStarterSwiftProject.framework */; };
 		749861AD1BCF52FB8DB0CCB4 /* Pods_MvvmStarterSwiftProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */; };
+		9E41E346224AF0A600D6201D /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41E345224AF0A600D6201D /* MainViewModelTests.swift */; };
+		9E41E348224AF17C00D6201D /* SomethingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41E347224AF17C00D6201D /* SomethingViewModel.swift */; };
+		9E41E34C224AF5F900D6201D /* SomethingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E41E34A224AF5F900D6201D /* SomethingTableViewCell.swift */; };
+		9E41E34D224AF5F900D6201D /* SomethingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E41E34B224AF5F900D6201D /* SomethingTableViewCell.xib */; };
 		9EBE69A5224984DA0003E236 /* Something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBE69A4224984DA0003E236 /* Something.swift */; };
 		9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3ED0922496F90002B8A85 /* Endpoint.swift */; };
 		A3D90F912D6349DEC0889EC1 /* Pods_MvvmStarterSwiftProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */; };
@@ -57,6 +61,10 @@
 		5017ED880420ACE0D60ED9BD /* Pods_MvvmStarterSwiftProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		821B7D49D0F26565BCC4947F /* Pods-MvvmStarterSwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProject/Pods-MvvmStarterSwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		94A74BC8A7C3DBF65EBCACA7 /* Pods_MvvmStarterSwiftProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvvmStarterSwiftProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E41E345224AF0A600D6201D /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		9E41E347224AF17C00D6201D /* SomethingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingViewModel.swift; sourceTree = "<group>"; };
+		9E41E34A224AF5F900D6201D /* SomethingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingTableViewCell.swift; sourceTree = "<group>"; };
+		9E41E34B224AF5F900D6201D /* SomethingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SomethingTableViewCell.xib; sourceTree = "<group>"; };
 		9EBE69A4224984DA0003E236 /* Something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Something.swift; sourceTree = "<group>"; };
 		9ED3ED0922496F90002B8A85 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A65E9D4B0B14C97EF64586B2 /* Pods-MvvmStarterSwiftProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MvvmStarterSwiftProjectTests/Pods-MvvmStarterSwiftProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +150,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9E41E349224AF5E600D6201D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E41E34A224AF5F900D6201D /* SomethingTableViewCell.swift */,
+				9E41E34B224AF5F900D6201D /* SomethingTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9EBE69A3224984CF0003E236 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +209,7 @@
 			children = (
 				D629D7D11ED9FC9A0021539B /* MvvmStarterSwiftProjectTests.swift */,
 				D629D7D31ED9FC9B0021539B /* Info.plist */,
+				9E41E345224AF0A600D6201D /* MainViewModelTests.swift */,
 			);
 			path = MvvmStarterSwiftProjectTests;
 			sourceTree = "<group>";
@@ -260,6 +278,7 @@
 		D629D8221EDA1DFB0021539B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9E41E349224AF5E600D6201D /* Views */,
 				9EBE69A3224984CF0003E236 /* Models */,
 				D629D8591EDA2B840021539B /* Service */,
 				D629D8231EDA1DFB0021539B /* ViewControllers */,
@@ -281,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				D629D8571EDA298D0021539B /* MainViewModel.swift */,
+				9E41E347224AF17C00D6201D /* SomethingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -502,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E41E34D224AF5F900D6201D /* SomethingTableViewCell.xib in Resources */,
 				D629D7C41ED9FC9A0021539B /* Assets.xcassets in Resources */,
 				D629D8271EDA1ED40021539B /* Main.storyboard in Resources */,
 				D629D82A1EDA1EF80021539B /* Splash.storyboard in Resources */,
@@ -690,13 +711,14 @@
 				D629D85D1EDA2C210021539B /* StoryboardNameConstants.swift in Sources */,
 				D629D82E1EDA20110021539B /* ZORLabel.swift in Sources */,
 				D629D8341EDA219B0021539B /* ZORTextView.swift in Sources */,
-				9EBE69A2224978D30003E236 /* UIViewController+Extensions.swift in Sources */,
 				D629D8521EDA257B0021539B /* ZORModel.swift in Sources */,
 				D629D8361EDA21DD0021539B /* ZORSecondaryButton.swift in Sources */,
+				9E41E348224AF17C00D6201D /* SomethingViewModel.swift in Sources */,
 				D629D8581EDA298D0021539B /* MainViewModel.swift in Sources */,
 				D629D8301EDA20220021539B /* ZORButton.swift in Sources */,
 				D629D8491EDA24C90021539B /* ZORViewController.swift in Sources */,
 				9ED3ED0A22496F90002B8A85 /* Endpoint.swift in Sources */,
+				9E41E34C224AF5F900D6201D /* SomethingTableViewCell.swift in Sources */,
 				D629D84E1EDA253C0021539B /* ZORService.swift in Sources */,
 				D629D8321EDA218A0021539B /* ZORTextField.swift in Sources */,
 				9EBE69A5224984DA0003E236 /* Something.swift in Sources */,
@@ -711,6 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D629D7D21ED9FC9B0021539B /* MvvmStarterSwiftProjectTests.swift in Sources */,
+				9E41E346224AF0A600D6201D /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

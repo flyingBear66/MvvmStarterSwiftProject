@@ -11,8 +11,11 @@ import RxSwift
 
 class MainViewModel: ZORViewModel {
     
-    public let something: PublishSubject<Something> = PublishSubject()
-    public let somethings: PublishSubject<[Something]> = PublishSubject()
+    //    public let somethings: PublishSubject<[Something]> = PublishSubject() // Prev
+    public let something: Variable<Something> = Variable(Something(name: "Nil"))
+    public let somethingCount: Variable<Int> = Variable(0)
+    public let somethingViewModels: Variable<[SomethingViewModel]> = Variable([])
+    public let somethingViewModelsChanged: PublishSubject<[SomethingViewModel]> = PublishSubject()
 
     let service = MainService()
     let disposeBag = DisposeBag()
@@ -20,7 +23,8 @@ class MainViewModel: ZORViewModel {
     func getSomething() {
         self.loading.onNext(true)
         service.getSomething().bind { something in
-            self.something.onNext(something)
+//            self.something.onNext(something)
+            self.something.value = something
             self.loading.onNext(false)
         }.disposed(by: disposeBag)
     }
@@ -28,17 +32,26 @@ class MainViewModel: ZORViewModel {
     func getSomethings() {
         self.loading.onNext(true)
         service.getSomethings().bind { somethings in
-            self.somethings.onNext(somethings)
+            self.somethingCount.value = somethings.count
+            let viewModels = self.getSomethingViewModels(with: somethings)
+            self.somethingViewModels.value = viewModels
+            self.somethingViewModelsChanged.onNext(viewModels)
             self.loading.onNext(false)
         }.disposed(by: disposeBag)
     }
     
     func postSomethingObject() {
-        self.loading.onNext(true)
-        let something = Something(name: "NameSomething")
-        service.postSomethingObject(something: something).bind { something in
-            self.something.onNext(something)
-        }.disposed(by: disposeBag)
+//        self.loading.onNext(true)
+//        let something = Something(name: "NameSomething")
+//        service.postSomethingObject(something: something).bind { something in
+//            self.something.onNext(something)
+//        }.disposed(by: disposeBag)
+    }
+    
+    func getSomethingViewModels(with somethingModels:[Something]) -> [SomethingViewModel] {
+        return somethingModels.map({ something -> SomethingViewModel in
+            SomethingViewModel(somethingModel: something)
+        })
     }
 
 }

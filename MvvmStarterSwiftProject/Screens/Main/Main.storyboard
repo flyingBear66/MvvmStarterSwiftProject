@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cU7-1z-S3M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cU7-1z-S3M">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,25 +22,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzv-JX-7yo" customClass="ZORLabel" customModule="MvvmStarterSwiftProject" customModuleProvider="target">
-                                <rect key="frame" x="169" y="323" width="37" height="21"/>
+                                <rect key="frame" x="169" y="49" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6TG-BW-H3T">
+                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Yzv-JX-7yo" firstAttribute="centerY" secondItem="Mbn-ef-A2K" secondAttribute="centerY" id="QoB-ki-MrM"/>
+                            <constraint firstItem="Yzv-JX-7yo" firstAttribute="top" secondItem="lit-yE-aN2" secondAttribute="bottom" constant="29" id="0eJ-RJ-MFr"/>
+                            <constraint firstAttribute="trailing" secondItem="6TG-BW-H3T" secondAttribute="trailing" id="1zb-i0-TH2"/>
+                            <constraint firstItem="sRN-iz-kjI" firstAttribute="top" secondItem="6TG-BW-H3T" secondAttribute="bottom" id="3L5-0v-w36"/>
+                            <constraint firstItem="6TG-BW-H3T" firstAttribute="leading" secondItem="Mbn-ef-A2K" secondAttribute="leading" id="6A8-vO-bTo"/>
+                            <constraint firstItem="6TG-BW-H3T" firstAttribute="top" secondItem="Yzv-JX-7yo" secondAttribute="bottom" constant="8" id="aUI-PP-uob"/>
                             <constraint firstItem="Yzv-JX-7yo" firstAttribute="centerX" secondItem="Mbn-ef-A2K" secondAttribute="centerX" id="qWh-CK-4Tw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainLabel" destination="Yzv-JX-7yo" id="46p-ks-36w"/>
+                        <outlet property="somethingsTableView" destination="6TG-BW-H3T" id="8hs-aa-xnq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyI-kz-dhW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906" y="-91"/>
+            <point key="canvasLocation" x="-906.39999999999998" y="-91.304347826086968"/>
         </scene>
     </scenes>
 </document>
