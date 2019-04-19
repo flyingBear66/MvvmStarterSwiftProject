@@ -12,25 +12,38 @@ import RxSwift
 class MainViewModel: ZORViewModel {
     
     //    public let somethings: PublishSubject<[Something]> = PublishSubject() // Prev
-    public let something: Variable<Something> = Variable(Something(name: "Nil"))
+    public let something: PublishSubject<Something> = PublishSubject()
     public let somethingCount: Variable<Int> = Variable(0)
     public let somethingViewModels: Variable<[SomethingViewModel]> = Variable([])
     public let somethingViewModelsChanged: PublishSubject<[SomethingViewModel]> = PublishSubject()
 
-    let service = MainService()
+    var service: MainServiceProtocol?
     let disposeBag = DisposeBag()
+    
+    init(service: MainServiceProtocol = MainService.shared()) {
+        self.service = service
+    }
     
     func getSomething() {
         self.loading.onNext(true)
+        guard let service = service else {
+            self.error.onNext(.internalError("Service is not initilized correctly"))
+            self.loading.onNext(false)
+            return
+        }
         service.getSomething().bind { something in
-//            self.something.onNext(something)
-            self.something.value = something
+            self.something.onNext(something)
             self.loading.onNext(false)
         }.disposed(by: disposeBag)
     }
     
     func getSomethings() {
         self.loading.onNext(true)
+        guard let service = service else {
+            self.error.onNext(.internalError("Service is not initilized correctly"))
+            self.loading.onNext(false)
+            return
+        }
         service.getSomethings().bind { somethings in
             self.somethingCount.value = somethings.count
             let viewModels = self.getSomethingViewModels(with: somethings)
@@ -42,6 +55,11 @@ class MainViewModel: ZORViewModel {
     
     func postSomethingObject() {
 //        self.loading.onNext(true)
+//        guard let service = service else {
+//            self.error.onNext(.internalError("Service is not initilized correctly"))
+//            self.loading.onNext(false)
+//            return
+//        }
 //        let something = Something(name: "NameSomething")
 //        service.postSomethingObject(something: something).bind { something in
 //            self.something.onNext(something)
