@@ -3,22 +3,25 @@ PODS:
   - CocoaLumberjack/Core (3.5.2)
   - CocoaLumberjack/Swift (3.5.2):
     - CocoaLumberjack/Core
-  - RxCocoa (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxSwift (3.6.1)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
   - Alamofire
   - CocoaLumberjack/Swift
-  - RxCocoa (~> 3.0)
-  - RxSwift (~> 3.0)
+  - RxCocoa
+  - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
-  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: b28525568092523eb546e49c442048e2508192e3
+PODFILE CHECKSUM: d9cc26bf10df058c75174ea47d5b048a0192c739
 
 COCOAPODS: 1.4.0
